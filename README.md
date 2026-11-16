@@ -10,14 +10,15 @@ Looking Glass sends anything here by itself. A CSIRT analyst decides what to sha
 
 Only the HTTP requests, as the sinkhole recorded them. In Looking Glass: **Findings → Requests Looking Glass could not
 decode → Send to the Looking Glass creator → Download the decoding request**. The file holds up to five request lines,
-each with the infection name it is filed under, and nothing else:
+each with the infection name it is filed under, and nothing else. Only the value that could not be decoded is
+kept; every other parameter's value reads `<value>` and any address reads `<address>`:
 
 ```json
 {
  "looking_glass_decoding_request": 2,
  "made": "2026-11-16T08:00:00Z",
  "requests": [
-  {"infection": "example.family", "request": "GET /example/path?k=ENCODED-VALUE HTTP/1.1"}
+  {"infection": "example.family", "request": "GET /example/path?id=<value>&k=ENCODED-VALUE HTTP/1.1"}
  ]
 }
 ```
