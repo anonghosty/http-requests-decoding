@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Send a decoding request (private)
+    url: https://github.com/anonghosty/http-requests-decoding/security/advisories/new
+    about: HTTP requests Looking Glass could not decode go here, privately. Never post them in a public issue.
+  - name: A problem with Looking Glass itself
+    url: https://github.com/anonghosty/looking-glass/issues
+    about: Questions and problems with the platform belong to its own repository.
